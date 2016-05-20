@@ -1,0 +1,19 @@
+{
+  "name": "eecology-shared",
+  "format": "1",
+  "version": "1.0.0",
+  "creator": "NLeSC",
+  "summary": "Short summary",
+  "detailedDescription": "Long description of package",
+  "type": "code",
+  "signatures": [
+    {
+      "name": "NLeSC",
+      "uuid": "08fb6376-b720-434c-88f2-4242a7d317fe",
+      "created": "2014-01-07T13:32:19Z",
+      "algorithm": "SHA1withRSA",
+      "nonce": "xwJsJsWJCg8\u003d",
+      "signature": "YxgdomH9a0Z0DhiMOOhUPkExspLOOS+wxswFiLO9WaZHSSf6uhsh09qtaMviPFb71HNQUZiYJFOT4x1i6g1Esd4VOisfKdqRTyAQ7eILFnM2J/v03b1cYF/v3CcXY2gTsvFpKT7Qcq2c+F7d+gGtw6kyJZh3C1mSGgrJSPrdiiazM6tksYboDjH04Y35lmL8Pvoza8hSCxr1aohf81LTG1+2KQoFynU6xLSxao4CNKWF0NYMXkQ46dO3tnS5UPZNpxo9N08xcSR6xji+JzTWgwDCcpkzBWh+6CE+j6c13Ow9o2SBQokCoDGm9cYDrDI+Z5Svmuei2qNc+GcWnBjUCg\u003d\u003d"
+    }
+  ]
+}

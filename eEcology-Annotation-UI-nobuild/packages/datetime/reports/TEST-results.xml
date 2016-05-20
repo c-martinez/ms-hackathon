@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9.2 (Linux)" package="" timestamp="2014-10-14T09:46:15" id="0" hostname="eslt003vm1.esciencecenter.local" tests="19" errors="0" failures="0" time="0.014">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34"/>
+    </properties>
+    <testcase name="getStartField" time="0.006" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTimeRange getters"/>
+    <testcase name="getEndField" time="0.001" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTimeRange getters"/>
+    <testcase name="afterComponentLayout" time="0.002" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTimeRange methods"/>
+    <testcase name="setMinEnd" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTimeRange methods"/>
+    <testcase name="setMaxStart" time="0.001" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTimeRange methods"/>
+    <testcase name="focuses date field" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime focus"/>
+    <testcase name="Returns null when date and time are not set" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime getValue"/>
+    <testcase name="returns datetime when date and time are set" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime getValue"/>
+    <testcase name="returns null when getValue() returns null" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime getSubmitValue"/>
+    <testcase name="set fields when value is a Date object" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime setValue"/>
+    <testcase name="set fields when value is a string" time="0.001" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime setValue"/>
+    <testcase name="setMaxValue" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime"/>
+    <testcase name="setMinValue" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime"/>
+    <testcase name="should use datefield.format+&quot;T&quot;+timefield.format" time="0.001" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime getFormat"/>
+    <testcase name="should use datefield.submitFormat+&quot;T&quot;+timefield.submitFormat" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime getFormat"/>
+    <testcase name="should return no errors without a vtype" time="0.002" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime getErrors"/>
+    <testcase name="should return date and time errors" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime getErrors"/>
+    <testcase name="should return no errors with a vtype" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime getErrors"/>
+    <testcase name="should return vtype error" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_form_field_DateTime getErrors"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

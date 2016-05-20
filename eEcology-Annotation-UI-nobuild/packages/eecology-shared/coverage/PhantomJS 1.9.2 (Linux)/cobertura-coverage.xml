@@ -1,0 +1,529 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="252"  lines-covered="22"  line-rate="0.0873"  branches-valid="81"  branches-covered="7"  branch-rate="0.0864"  timestamp="1389101537091" complexity="0" version="0.1">
+<sources>
+	<source>/home/stefanv/git/eEcology-ExtJS/packages/eecology-shared</source>
+</sources>
+<packages>
+	<package name="form.field"  line-rate="0.045599999999999995"  branch-rate="0.0263" >
+	<classes>
+		<class name="Color.js"  filename="./src/NLeSC/eEcology/form/field/Color.js"  line-rate="0.0667"  branch-rate="0" >
+		<methods>
+			<method name="(anonymous_1)"  hits="0"  signature="()V" >
+				<lines><line number="35"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="0"  signature="()V" >
+				<lines><line number="52"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_3)"  hits="0"  signature="()V" >
+				<lines><line number="58"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_4)"  hits="0"  signature="()V" >
+				<lines><line number="70"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_5)"  hits="0"  signature="()V" >
+				<lines><line number="74"  hits="0" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="19"  hits="1"  branch="false" />
+			<line number="36"  hits="0"  branch="false" />
+			<line number="38"  hits="0"  branch="false" />
+			<line number="53"  hits="0"  branch="false" />
+			<line number="59"  hits="0"  branch="false" />
+			<line number="61"  hits="0"  branch="false" />
+			<line number="62"  hits="0"  branch="false" />
+			<line number="63"  hits="0"  branch="false" />
+			<line number="64"  hits="0"  branch="false" />
+			<line number="71"  hits="0"  branch="false" />
+			<line number="72"  hits="0"  branch="false" />
+			<line number="75"  hits="0"  branch="false" />
+			<line number="76"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="77"  hits="0"  branch="false" />
+			<line number="79"  hits="0"  branch="false" />
+		</lines>
+		</class>
+		<class name="TrackerCombo.js"  filename="./src/NLeSC/eEcology/form/field/TrackerCombo.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="36"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="TrackerGrid.js"  filename="./src/NLeSC/eEcology/form/field/TrackerGrid.js"  line-rate="0.1429"  branch-rate="0.1" >
+		<methods>
+			<method name="(anonymous_1)"  hits="0"  signature="()V" >
+				<lines><line number="48"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="3"  signature="()V" >
+				<lines><line number="58"  hits="3" /></lines>
+			</method>
+			<method name="(anonymous_3)"  hits="2"  signature="()V" >
+				<lines><line number="61"  hits="2" /></lines>
+			</method>
+			<method name="(anonymous_4)"  hits="0"  signature="()V" >
+				<lines><line number="68"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_5)"  hits="0"  signature="()V" >
+				<lines><line number="79"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_6)"  hits="0"  signature="()V" >
+				<lines><line number="86"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_7)"  hits="0"  signature="()V" >
+				<lines><line number="90"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_8)"  hits="0"  signature="()V" >
+				<lines><line number="95"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_9)"  hits="0"  signature="()V" >
+				<lines><line number="103"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_10)"  hits="0"  signature="()V" >
+				<lines><line number="118"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_11)"  hits="0"  signature="()V" >
+				<lines><line number="135"  hits="0" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="19"  hits="1"  branch="false" />
+			<line number="49"  hits="0"  branch="false" />
+			<line number="53"  hits="0"  branch="false" />
+			<line number="54"  hits="0"  branch="false" />
+			<line number="55"  hits="0"  branch="false" />
+			<line number="56"  hits="0"  branch="false" />
+			<line number="59"  hits="3"  branch="false" />
+			<line number="62"  hits="2"  branch="false" />
+			<line number="63"  hits="2"  branch="true"  condition-coverage="100% (2/2)" />
+			<line number="64"  hits="1"  branch="false" />
+			<line number="66"  hits="1"  branch="false" />
+			<line number="69"  hits="0"  branch="false" />
+			<line number="70"  hits="0"  branch="false" />
+			<line number="71"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="73"  hits="0"  branch="false" />
+			<line number="75"  hits="0"  branch="false" />
+			<line number="76"  hits="0"  branch="false" />
+			<line number="77"  hits="0"  branch="false" />
+			<line number="80"  hits="0"  branch="false" />
+			<line number="81"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="82"  hits="0"  branch="false" />
+			<line number="84"  hits="0"  branch="false" />
+			<line number="87"  hits="0"  branch="false" />
+			<line number="88"  hits="0"  branch="false" />
+			<line number="91"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="92"  hits="0"  branch="false" />
+			<line number="96"  hits="0"  branch="false" />
+			<line number="100"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="104"  hits="0"  branch="false" />
+			<line number="108"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="109"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="110"  hits="0"  branch="false" />
+			<line number="112"  hits="0"  branch="false" />
+			<line number="115"  hits="0"  branch="false" />
+			<line number="120"  hits="0"  branch="false" />
+			<line number="122"  hits="0"  branch="false" />
+			<line number="123"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="124"  hits="0"  branch="false" />
+			<line number="137"  hits="0"  branch="false" />
+			<line number="139"  hits="0"  branch="false" />
+			<line number="140"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="141"  hits="0"  branch="false" />
+		</lines>
+		</class>
+		<class name="TrackerSelector.js"  filename="./src/NLeSC/eEcology/form/field/TrackerSelector.js"  line-rate="0.016399999999999998"  branch-rate="0" >
+		<methods>
+			<method name="(anonymous_1)"  hits="0"  signature="()V" >
+				<lines><line number="94"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="0"  signature="()V" >
+				<lines><line number="100"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_3)"  hits="0"  signature="()V" >
+				<lines><line number="127"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_4)"  hits="0"  signature="()V" >
+				<lines><line number="132"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_5)"  hits="0"  signature="()V" >
+				<lines><line number="147"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_6)"  hits="0"  signature="()V" >
+				<lines><line number="167"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_7)"  hits="0"  signature="()V" >
+				<lines><line number="173"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_8)"  hits="0"  signature="()V" >
+				<lines><line number="183"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_9)"  hits="0"  signature="()V" >
+				<lines><line number="226"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_10)"  hits="0"  signature="()V" >
+				<lines><line number="229"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_11)"  hits="0"  signature="()V" >
+				<lines><line number="230"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_12)"  hits="0"  signature="()V" >
+				<lines><line number="248"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_13)"  hits="0"  signature="()V" >
+				<lines><line number="251"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_14)"  hits="0"  signature="()V" >
+				<lines><line number="264"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_15)"  hits="0"  signature="()V" >
+				<lines><line number="277"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_16)"  hits="0"  signature="()V" >
+				<lines><line number="290"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_17)"  hits="0"  signature="()V" >
+				<lines><line number="312"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_18)"  hits="0"  signature="()V" >
+				<lines><line number="333"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_19)"  hits="0"  signature="()V" >
+				<lines><line number="341"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_20)"  hits="1"  signature="()V" >
+				<lines><line number="348"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_21)"  hits="1"  signature="()V" >
+				<lines><line number="351"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_22)"  hits="0"  signature="()V" >
+				<lines><line number="354"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_23)"  hits="0"  signature="()V" >
+				<lines><line number="366"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_24)"  hits="0"  signature="()V" >
+				<lines><line number="370"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_25)"  hits="0"  signature="()V" >
+				<lines><line number="377"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_26)"  hits="0"  signature="()V" >
+				<lines><line number="384"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_27)"  hits="0"  signature="()V" >
+				<lines><line number="389"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_28)"  hits="0"  signature="()V" >
+				<lines><line number="404"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_29)"  hits="0"  signature="()V" >
+				<lines><line number="409"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_30)"  hits="0"  signature="()V" >
+				<lines><line number="425"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_31)"  hits="0"  signature="()V" >
+				<lines><line number="437"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_32)"  hits="0"  signature="()V" >
+				<lines><line number="444"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_33)"  hits="0"  signature="()V" >
+				<lines><line number="449"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_34)"  hits="0"  signature="()V" >
+				<lines><line number="456"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_35)"  hits="0"  signature="()V" >
+				<lines><line number="461"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_36)"  hits="0"  signature="()V" >
+				<lines><line number="465"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_37)"  hits="0"  signature="()V" >
+				<lines><line number="466"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_38)"  hits="0"  signature="()V" >
+				<lines><line number="470"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_39)"  hits="0"  signature="()V" >
+				<lines><line number="478"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_40)"  hits="0"  signature="()V" >
+				<lines><line number="481"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_41)"  hits="0"  signature="()V" >
+				<lines><line number="489"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_42)"  hits="0"  signature="()V" >
+				<lines><line number="504"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_43)"  hits="0"  signature="()V" >
+				<lines><line number="520"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_44)"  hits="0"  signature="()V" >
+				<lines><line number="530"  hits="0" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="20"  hits="1"  branch="false" />
+			<line number="95"  hits="0"  branch="false" />
+			<line number="96"  hits="0"  branch="false" />
+			<line number="97"  hits="0"  branch="false" />
+			<line number="98"  hits="0"  branch="false" />
+			<line number="101"  hits="0"  branch="false" />
+			<line number="103"  hits="0"  branch="false" />
+			<line number="104"  hits="0"  branch="false" />
+			<line number="106"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="107"  hits="0"  branch="false" />
+			<line number="109"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="110"  hits="0"  branch="false" />
+			<line number="112"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="113"  hits="0"  branch="false" />
+			<line number="115"  hits="0"  branch="false" />
+			<line number="121"  hits="0"  branch="false" />
+			<line number="122"  hits="0"  branch="false" />
+			<line number="123"  hits="0"  branch="false" />
+			<line number="125"  hits="0"  branch="false" />
+			<line number="128"  hits="0"  branch="false" />
+			<line number="131"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="132"  hits="0"  branch="false" />
+			<line number="133"  hits="0"  branch="false" />
+			<line number="145"  hits="0"  branch="false" />
+			<line number="148"  hits="0"  branch="false" />
+			<line number="149"  hits="0"  branch="false" />
+			<line number="162"  hits="0"  branch="false" />
+			<line number="163"  hits="0"  branch="false" />
+			<line number="165"  hits="0"  branch="false" />
+			<line number="168"  hits="0"  branch="false" />
+			<line number="169"  hits="0"  branch="false" />
+			<line number="172"  hits="0"  branch="false" />
+			<line number="173"  hits="0"  branch="false" />
+			<line number="174"  hits="0"  branch="false" />
+			<line number="176"  hits="0"  branch="false" />
+			<line number="184"  hits="0"  branch="false" />
+			<line number="186"  hits="0"  branch="false" />
+			<line number="188"  hits="0"  branch="false" />
+			<line number="190"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="191"  hits="0"  branch="false" />
+			<line number="194"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="195"  hits="0"  branch="false" />
+			<line number="197"  hits="0"  branch="false" />
+			<line number="198"  hits="0"  branch="false" />
+			<line number="200"  hits="0"  branch="false" />
+			<line number="202"  hits="0"  branch="false" />
+			<line number="203"  hits="0"  branch="false" />
+			<line number="205"  hits="0"  branch="false" />
+			<line number="227"  hits="0"  branch="false" />
+			<line number="229"  hits="0"  branch="false" />
+			<line number="230"  hits="0"  branch="false" />
+			<line number="231"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="232"  hits="0"  branch="false" />
+			<line number="234"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="235"  hits="0"  branch="false" />
+			<line number="249"  hits="0"  branch="false" />
+			<line number="251"  hits="0"  branch="false" />
+			<line number="252"  hits="0"  branch="false" />
+			<line number="253"  hits="0"  branch="false" />
+			<line number="255"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="256"  hits="0"  branch="false" />
+			<line number="257"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="258"  hits="0"  branch="false" />
+			<line number="260"  hits="0"  branch="false" />
+			<line number="265"  hits="0"  branch="false" />
+			<line number="269"  hits="0"  branch="false" />
+			<line number="270"  hits="0"  branch="false" />
+			<line number="271"  hits="0"  branch="false" />
+			<line number="272"  hits="0"  branch="false" />
+			<line number="273"  hits="0"  branch="false" />
+			<line number="274"  hits="0"  branch="false" />
+			<line number="278"  hits="0"  branch="false" />
+			<line number="282"  hits="0"  branch="false" />
+			<line number="283"  hits="0"  branch="false" />
+			<line number="284"  hits="0"  branch="false" />
+			<line number="285"  hits="0"  branch="false" />
+			<line number="286"  hits="0"  branch="false" />
+			<line number="287"  hits="0"  branch="false" />
+			<line number="291"  hits="0"  branch="false" />
+			<line number="300"  hits="0"  branch="false" />
+			<line number="301"  hits="0"  branch="false" />
+			<line number="302"  hits="0"  branch="false" />
+			<line number="303"  hits="0"  branch="false" />
+			<line number="304"  hits="0"  branch="false" />
+			<line number="305"  hits="0"  branch="false" />
+			<line number="307"  hits="0"  branch="false" />
+			<line number="308"  hits="0"  branch="false" />
+			<line number="309"  hits="0"  branch="false" />
+			<line number="313"  hits="0"  branch="false" />
+			<line number="321"  hits="0"  branch="false" />
+			<line number="322"  hits="0"  branch="false" />
+			<line number="323"  hits="0"  branch="false" />
+			<line number="324"  hits="0"  branch="false" />
+			<line number="325"  hits="0"  branch="false" />
+			<line number="326"  hits="0"  branch="false" />
+			<line number="328"  hits="0"  branch="false" />
+			<line number="329"  hits="0"  branch="false" />
+			<line number="330"  hits="0"  branch="false" />
+			<line number="334"  hits="0"  branch="false" />
+			<line number="337"  hits="0"  branch="false" />
+			<line number="338"  hits="0"  branch="false" />
+			<line number="342"  hits="0"  branch="false" />
+			<line number="345"  hits="0"  branch="false" />
+			<line number="346"  hits="0"  branch="false" />
+			<line number="349"  hits="1"  branch="false" />
+			<line number="352"  hits="1"  branch="false" />
+			<line number="355"  hits="0"  branch="false" />
+			<line number="361"  hits="0"  branch="false" />
+			<line number="362"  hits="0"  branch="false" />
+			<line number="363"  hits="0"  branch="false" />
+			<line number="367"  hits="0"  branch="false" />
+			<line number="371"  hits="0"  branch="false" />
+			<line number="372"  hits="0"  branch="false" />
+			<line number="373"  hits="0"  branch="false" />
+			<line number="375"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="377"  hits="0"  branch="false" />
+			<line number="378"  hits="0"  branch="false" />
+			<line number="380"  hits="0"  branch="false" />
+			<line number="384"  hits="0"  branch="false" />
+			<line number="385"  hits="0"  branch="false" />
+			<line number="386"  hits="0"  branch="false" />
+			<line number="389"  hits="0"  branch="false" />
+			<line number="390"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="392"  hits="0"  branch="false" />
+			<line number="395"  hits="0"  branch="false" />
+			<line number="396"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="397"  hits="0"  branch="false" />
+			<line number="399"  hits="0"  branch="false" />
+			<line number="401"  hits="0"  branch="false" />
+			<line number="405"  hits="0"  branch="false" />
+			<line number="406"  hits="0"  branch="false" />
+			<line number="410"  hits="0"  branch="false" />
+			<line number="412"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="413"  hits="0"  branch="false" />
+			<line number="414"  hits="0"  branch="false" />
+			<line number="417"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="418"  hits="0"  branch="false" />
+			<line number="420"  hits="0"  branch="false" />
+			<line number="426"  hits="0"  branch="false" />
+			<line number="429"  hits="0"  branch="false" />
+			<line number="431"  hits="0"  branch="false" />
+			<line number="434"  hits="0"  branch="false" />
+			<line number="438"  hits="0"  branch="false" />
+			<line number="440"  hits="0"  branch="false" />
+			<line number="441"  hits="0"  branch="false" />
+			<line number="442"  hits="0"  branch="false" />
+			<line number="444"  hits="0"  branch="false" />
+			<line number="445"  hits="0"  branch="false" />
+			<line number="450"  hits="0"  branch="false" />
+			<line number="452"  hits="0"  branch="false" />
+			<line number="453"  hits="0"  branch="false" />
+			<line number="454"  hits="0"  branch="false" />
+			<line number="456"  hits="0"  branch="false" />
+			<line number="457"  hits="0"  branch="false" />
+			<line number="462"  hits="0"  branch="false" />
+			<line number="463"  hits="0"  branch="false" />
+			<line number="466"  hits="0"  branch="false" />
+			<line number="467"  hits="0"  branch="false" />
+			<line number="471"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="479"  hits="0"  branch="false" />
+			<line number="482"  hits="0"  branch="false" />
+			<line number="486"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="490"  hits="0"  branch="false" />
+			<line number="494"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="495"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="496"  hits="0"  branch="false" />
+			<line number="498"  hits="0"  branch="false" />
+			<line number="501"  hits="0"  branch="false" />
+			<line number="506"  hits="0"  branch="false" />
+			<line number="508"  hits="0"  branch="false" />
+			<line number="509"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="510"  hits="0"  branch="false" />
+			<line number="522"  hits="0"  branch="false" />
+			<line number="524"  hits="0"  branch="false" />
+			<line number="525"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="526"  hits="0"  branch="false" />
+			<line number="531"  hits="0"  branch="false" />
+			<line number="532"  hits="0"  branch="false" />
+			<line number="533"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="534"  hits="0"  branch="false" />
+			<line number="536"  hits="0"  branch="true"  condition-coverage="0% (0/4)" />
+			<line number="537"  hits="0"  branch="false" />
+			<line number="539"  hits="0"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+	<package name="grid"  line-rate="1"  branch-rate="1" >
+	<classes>
+		<class name="Trackers.js"  filename="./src/NLeSC/eEcology/grid/Trackers.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="(anonymous_1)"  hits="1"  signature="()V" >
+				<lines><line number="55"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="3"  signature="()V" >
+				<lines><line number="57"  hits="3" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="19"  hits="1"  branch="false" />
+			<line number="57"  hits="1"  branch="false" />
+			<line number="58"  hits="3"  branch="true"  condition-coverage="100% (5/5)" />
+			<line number="59"  hits="2"  branch="false" />
+			<line number="62"  hits="1"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+	<package name="model"  line-rate="1"  branch-rate="1" >
+	<classes>
+		<class name="Project.js"  filename="./src/NLeSC/eEcology/model/Project.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="19"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="Species.js"  filename="./src/NLeSC/eEcology/model/Species.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="19"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="Tracker.js"  filename="./src/NLeSC/eEcology/model/Tracker.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="19"  hits="1"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+	<package name="store"  line-rate="1"  branch-rate="1" >
+	<classes>
+		<class name="Projects.js"  filename="./src/NLeSC/eEcology/store/Projects.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="19"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="Species.js"  filename="./src/NLeSC/eEcology/store/Species.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="19"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="Trackers.js"  filename="./src/NLeSC/eEcology/store/Trackers.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="19"  hits="1"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+</packages>
+</coverage>

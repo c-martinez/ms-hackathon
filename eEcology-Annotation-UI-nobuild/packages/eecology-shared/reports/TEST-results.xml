@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="PhantomJS 1.9.2 (Linux)" package="undefined" timestamp="2014-01-07T13:32:16" id="0" hostname="eslt003vm1.esciencecenter.local" tests="16" errors="0" failures="0" time="0.007">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.2 Safari/534.34"/>
+    </properties>
+    <testcase name="fieldLabel" time="0.003" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerCombo"/>
+    <testcase name="display field" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerCombo"/>
+    <testcase name="store" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerCombo"/>
+    <testcase name="fieldLabel" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerGrid"/>
+    <testcase name="name" time="0.001" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerGrid"/>
+    <testcase name="getSelectionModel" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerGrid"/>
+    <testcase name="no selection" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerGrid getValue"/>
+    <testcase name="one selected" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerGrid getValue"/>
+    <testcase name="fieldLabel" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerSelector"/>
+    <testcase name="name" time="0.001" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerSelector"/>
+    <testcase name="onSelectedDrop" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerSelector"/>
+    <testcase name="onAvailableDrop" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_form_field_TrackerSelector"/>
+    <testcase name="store" time="0.001" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_grid_Trackers"/>
+    <testcase name="initComponent" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_grid_Trackers"/>
+    <testcase name="model" time="0.001" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_store_Trackers"/>
+    <testcase name="should have a default url" time="0" classname="PhantomJS 1.9.2 (Linux).NLeSC_eEcology_store_Trackers"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

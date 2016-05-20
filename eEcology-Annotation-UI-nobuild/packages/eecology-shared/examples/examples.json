@@ -1,0 +1,41 @@
+[
+    {
+        "title": "Forms",
+        "items": [
+            {
+                "name": "tracker-combo",
+                "title": "Combo of Trackers",
+                "description": "Combi of trackers",
+                "url": "form/tracker_combo.html",
+                "icon": "shared/screens/grid-filter.gif",
+                "status": "new"
+            }, {
+                "name": "tracker-grid",
+                "title": "Grid of Trackers",
+                "description": "Grid of Trackers",
+                "url": "form/tracker_grid.html",
+                "icon": "shared/screens/grid-filter.gif",
+                "status": "new"
+            }, {
+                "name": "tracker-selector",
+                "title": "Selector of Trackers",
+                "description": "Select trackers by moving between available and selected grid",
+                "url": "form/tracker_selector.html",
+                "icon": "shared/screens/grid-filter.gif",
+                "status": "new"
+            }
+        ]
+    }, {
+        "title": "Grids",
+        "items": [
+            {
+                "name": "grid-trackers",
+                "title": "Grid of Trackers",
+                "description": "Grid of trackers",
+                "url": "grid/trackers.html",
+                "icon": "shared/screens/grid-filter.gif",
+                "status": "new"
+            }
+        ]
+    }
+]

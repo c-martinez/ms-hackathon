@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">/*
+ * Copyright 2013 Netherlands eScience Center
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+<span id='NLeSC-eEcology-grid-Trackers'>/**
+</span> * Grid of filterable trackers.
+ */
+Ext.define('NLeSC.eEcology.grid.Trackers', {
+    extend: 'Ext.grid.Panel',
+    alias: 'widget.trackersgrid',
+    requires: ['NLeSC.eEcology.store.Projects', 'NLeSC.eEcology.store.Species',
+            'NLeSC.eEcology.store.Trackers', 'Ext.ux.grid.FiltersFeature'],
+<span id='NLeSC-eEcology-grid-Trackers-property-features'>    features: [{
+</span>        ftype: 'filters',
+        local: true
+    }],
+<span id='NLeSC-eEcology-grid-Trackers-property-store'>    store: 'trackers',
+</span><span id='NLeSC-eEcology-grid-Trackers-property-columns'>    columns: [{
+</span>        text: &quot;ID&quot;,
+        sortable: true,
+        dataIndex: 'id',
+        filter: {
+            type: 'numeric'
+        }
+    }, {
+        text: &quot;Species&quot;,
+        flex: 1,
+        sortable: true,
+        dataIndex: 'species',
+        filter: {
+            type: 'list',
+            store: 'species'
+        }
+    }, {
+        text: &quot;Project&quot;,
+        flex: 1,
+        sortable: true,
+        dataIndex: 'project',
+        filter: {
+            type: 'list',
+            store: 'projects'
+        }
+    }],
+<span id='NLeSC-eEcology-grid-Trackers-method-initComponent'>    initComponent: function() {
+</span>        // Convert store identifiers to actual stores
+        this.columns.forEach(function(c) {
+            if ('filter' in c &amp;&amp; 'store' in c.filter &amp;&amp; typeof c.filter.store === 'string') {
+                c.filter.store = Ext.StoreManager.lookup(c.filter.store);
+            }
+        });
+        this.callParent();
+    }
+});</pre>
+</body>
+</html>

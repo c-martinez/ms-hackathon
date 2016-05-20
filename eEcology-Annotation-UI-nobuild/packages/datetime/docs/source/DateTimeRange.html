@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">/*
+ * Copyright 2013 Netherlands eScience Center
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+<span id='NLeSC-form-field-DateTimeRange'>/**
+</span> * Date time range.
+ *
+ * Combine 2 date time components which are each others max and min.
+ *
+ *     @example
+ *     Ext.create('Ext.form.Panel', {
+ *         title: 'Time Range',
+ *         width: 340,
+ *         bodyPadding: 10,
+ *         height: 400,
+ *         renderTo: Ext.getBody(),
+ *         fieldDefaults: {
+ *             labelAlign: 'left',
+ *             labelWidth: 40,
+ *             anchor: '100%'
+ *         },
+ *         items: [{
+ *             xtype: 'datetimerange'
+ *        }]
+ *     });
+ */
+Ext.define('NLeSC.form.field.DateTimeRange', {
+    extend: 'Ext.form.FieldContainer',
+    requires: ['NLeSC.form.field.DateTime'],
+    alias: 'widget.datetimerange',
+<span id='NLeSC-form-field-DateTimeRange-property-layout'>    layout: 'vbox',
+</span><span id='NLeSC-form-field-DateTimeRange-property-defaultType'>    defaultType: 'xdatetime',
+</span><span id='NLeSC-form-field-DateTimeRange-property-defaults'>    defaults: {
+</span>        allowBlank: false
+    },
+<span id='NLeSC-form-field-DateTimeRange-property-items'>    items: [{
+</span>        fieldLabel: 'Start',
+        value: new Date(new Date().setUTCHours(0,0,0,0)-(1000*60*60*24*3)), // now - 3 days
+        name: 'start'
+    }, {
+        fieldLabel: 'End',
+        value: new Date(new Date().setUTCHours(0,0,0,0)), // date without time now
+        name: 'end'
+    }],
+<span id='NLeSC-form-field-DateTimeRange-method-getStartField'>    getStartField: function() {
+</span>        return this.items.getAt(0);
+    },
+<span id='NLeSC-form-field-DateTimeRange-method-getEndField'>    getEndField: function() {
+</span>        return this.items.getAt(1);
+    },
+<span id='NLeSC-form-field-DateTimeRange-method-afterComponentLayout'>    afterComponentLayout: function() {
+</span>        var startField = this.getStartField();
+        var endField = this.getEndField();
+
+        this.setMinEnd(startField, startField.getValue());
+        startField.on('change', this.setMinEnd, this);
+
+        this.setMaxStart(endField, endField.getValue());
+        endField.on('change', this.setMaxStart, this);
+    },
+<span id='NLeSC-form-field-DateTimeRange-method-setMinEnd'>    setMinEnd: function(startField, value) {
+</span>        var endField = this.getEndField();
+        endField.setMinValue(value);
+    },
+<span id='NLeSC-form-field-DateTimeRange-method-setMaxStart'>    setMaxStart: function(endField, value) {
+</span>        var startField = this.getStartField();
+        startField.setMaxValue(value);
+    }
+});</pre>
+</body>
+</html>

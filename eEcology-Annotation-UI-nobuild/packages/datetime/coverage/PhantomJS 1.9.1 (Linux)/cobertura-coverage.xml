@@ -1,0 +1,196 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="96"  lines-covered="32"  line-rate="0.3333"  branches-valid="47"  branches-covered="10"  branch-rate="0.21280000000000002"  timestamp="1384851700683" complexity="0" version="0.1">
+<sources>
+	<source>/home/stefanv/git/ExtJS-DateTime/packages/datetime</source>
+</sources>
+<packages>
+	<package name="field"  line-rate="0.3333"  branch-rate="0.21280000000000002" >
+	<classes>
+		<class name="DateTime.js"  filename="./src/NLeSC/form/field/DateTime.js"  line-rate="0.2289"  branch-rate="0.21280000000000002" >
+		<methods>
+			<method name="(anonymous_1)"  hits="0"  signature="()V" >
+				<lines><line number="108"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="0"  signature="()V" >
+				<lines><line number="118"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_3)"  hits="0"  signature="()V" >
+				<lines><line number="121"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_4)"  hits="0"  signature="()V" >
+				<lines><line number="134"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_5)"  hits="0"  signature="()V" >
+				<lines><line number="137"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_6)"  hits="0"  signature="()V" >
+				<lines><line number="151"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_7)"  hits="0"  signature="()V" >
+				<lines><line number="167"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_8)"  hits="1"  signature="()V" >
+				<lines><line number="199"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_9)"  hits="0"  signature="()V" >
+				<lines><line number="203"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_10)"  hits="0"  signature="()V" >
+				<lines><line number="208"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_11)"  hits="0"  signature="()V" >
+				<lines><line number="213"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_12)"  hits="2"  signature="()V" >
+				<lines><line number="219"  hits="2" /></lines>
+			</method>
+			<method name="(anonymous_13)"  hits="1"  signature="()V" >
+				<lines><line number="235"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_14)"  hits="0"  signature="()V" >
+				<lines><line number="241"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_15)"  hits="2"  signature="()V" >
+				<lines><line number="245"  hits="2" /></lines>
+			</method>
+			<method name="(anonymous_16)"  hits="2"  signature="()V" >
+				<lines><line number="253"  hits="2" /></lines>
+			</method>
+			<method name="(anonymous_17)"  hits="0"  signature="()V" >
+				<lines><line number="259"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_18)"  hits="1"  signature="()V" >
+				<lines><line number="268"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_19)"  hits="1"  signature="()V" >
+				<lines><line number="271"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_20)"  hits="0"  signature="()V" >
+				<lines><line number="274"  hits="0" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="51"  hits="1"  branch="false" />
+			<line number="109"  hits="0"  branch="false" />
+			<line number="110"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="112"  hits="0"  branch="false" />
+			<line number="119"  hits="0"  branch="false" />
+			<line number="122"  hits="0"  branch="false" />
+			<line number="126"  hits="0"  branch="false" />
+			<line number="128"  hits="0"  branch="false" />
+			<line number="135"  hits="0"  branch="false" />
+			<line number="138"  hits="0"  branch="false" />
+			<line number="142"  hits="0"  branch="false" />
+			<line number="144"  hits="0"  branch="false" />
+			<line number="145"  hits="0"  branch="false" />
+			<line number="147"  hits="0"  branch="false" />
+			<line number="148"  hits="0"  branch="false" />
+			<line number="152"  hits="0"  branch="false" />
+			<line number="154"  hits="0"  branch="true"  condition-coverage="0% (0/4)" />
+			<line number="156"  hits="0"  branch="false" />
+			<line number="157"  hits="0"  branch="false" />
+			<line number="158"  hits="0"  branch="false" />
+			<line number="161"  hits="0"  branch="false" />
+			<line number="166"  hits="0"  branch="false" />
+			<line number="168"  hits="0"  branch="false" />
+			<line number="170"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="171"  hits="0"  branch="false" />
+			<line number="173"  hits="0"  branch="true"  condition-coverage="0% (0/5)" />
+			<line number="176"  hits="0"  branch="false" />
+			<line number="177"  hits="0"  branch="false" />
+			<line number="178"  hits="0"  branch="false" />
+			<line number="179"  hits="0"  branch="true"  condition-coverage="0% (0/5)" />
+			<line number="182"  hits="0"  branch="false" />
+			<line number="183"  hits="0"  branch="false" />
+			<line number="184"  hits="0"  branch="false" />
+			<line number="190"  hits="0"  branch="false" />
+			<line number="195"  hits="0"  branch="false" />
+			<line number="197"  hits="0"  branch="false" />
+			<line number="200"  hits="1"  branch="false" />
+			<line number="201"  hits="1"  branch="false" />
+			<line number="204"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="205"  hits="0"  branch="false" />
+			<line number="206"  hits="0"  branch="false" />
+			<line number="209"  hits="0"  branch="false" />
+			<line number="210"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="211"  hits="0"  branch="false" />
+			<line number="213"  hits="0"  branch="false" />
+			<line number="214"  hits="0"  branch="false" />
+			<line number="216"  hits="0"  branch="false" />
+			<line number="217"  hits="0"  branch="false" />
+			<line number="220"  hits="2"  branch="false" />
+			<line number="224"  hits="2"  branch="true"  condition-coverage="100% (2/2)" />
+			<line number="225"  hits="1"  branch="true"  condition-coverage="50% (1/2)" />
+			<line number="226"  hits="1"  branch="false" />
+			<line number="227"  hits="1"  branch="false" />
+			<line number="230"  hits="0"  branch="false" />
+			<line number="233"  hits="2"  branch="false" />
+			<line number="236"  hits="1"  branch="false" />
+			<line number="237"  hits="1"  branch="true"  condition-coverage="50% (1/2)" />
+			<line number="242"  hits="0"  branch="false" />
+			<line number="243"  hits="0"  branch="false" />
+			<line number="246"  hits="2"  branch="true"  condition-coverage="100% (2/2)" />
+			<line number="247"  hits="1"  branch="false" />
+			<line number="249"  hits="2"  branch="false" />
+			<line number="250"  hits="2"  branch="false" />
+			<line number="251"  hits="2"  branch="false" />
+			<line number="254"  hits="2"  branch="true"  condition-coverage="100% (2/2)" />
+			<line number="260"  hits="0"  branch="false" />
+			<line number="261"  hits="0"  branch="true"  condition-coverage="0% (0/5)" />
+			<line number="263"  hits="0"  branch="false" />
+			<line number="264"  hits="0"  branch="false" />
+			<line number="266"  hits="0"  branch="false" />
+			<line number="269"  hits="1"  branch="false" />
+			<line number="272"  hits="1"  branch="false" />
+			<line number="275"  hits="0"  branch="false" />
+			<line number="276"  hits="0"  branch="false" />
+			<line number="277"  hits="0"  branch="false" />
+			<line number="278"  hits="0"  branch="false" />
+			<line number="279"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="281"  hits="0"  branch="false" />
+			<line number="282"  hits="0"  branch="false" />
+			<line number="284"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="285"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="286"  hits="0"  branch="true"  condition-coverage="0% (0/2)" />
+			<line number="290"  hits="0"  branch="false" />
+		</lines>
+		</class>
+		<class name="DateTimeRange.js"  filename="./src/NLeSC/form/field/DateTimeRange.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="(anonymous_1)"  hits="1"  signature="()V" >
+				<lines><line number="56"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="1"  signature="()V" >
+				<lines><line number="59"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_3)"  hits="1"  signature="()V" >
+				<lines><line number="62"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_4)"  hits="2"  signature="()V" >
+				<lines><line number="72"  hits="2" /></lines>
+			</method>
+			<method name="(anonymous_5)"  hits="2"  signature="()V" >
+				<lines><line number="76"  hits="2" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="38"  hits="1"  branch="false" />
+			<line number="57"  hits="1"  branch="false" />
+			<line number="60"  hits="1"  branch="false" />
+			<line number="63"  hits="1"  branch="false" />
+			<line number="64"  hits="1"  branch="false" />
+			<line number="66"  hits="1"  branch="false" />
+			<line number="67"  hits="1"  branch="false" />
+			<line number="69"  hits="1"  branch="false" />
+			<line number="70"  hits="1"  branch="false" />
+			<line number="73"  hits="2"  branch="false" />
+			<line number="74"  hits="2"  branch="false" />
+			<line number="77"  hits="2"  branch="false" />
+			<line number="78"  hits="2"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+</packages>
+</coverage>

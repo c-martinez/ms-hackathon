@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">/*
+ * Copyright 2013 Netherlands eScience Center
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+<span id='NLeSC-form-field-DateTime'>/**
+</span> * Provides a datetime input field with a date picker and time dropdown.
+ * The field is automiticly validated.
+ *
+ * Derived from [Sencha Forum](http://www.sencha.com/forum/showthread.php?134345-Ext.ux.form.field.DateTime)
+ *
+ *
+ * Forces date time to be represented in UTC instead of localized format. 
+ * 
+ * WATCH OUT! This will override functions in Ext.Date and Ext.picker.Time 
+ *
+ * Example usage:
+ *
+ *     @example
+ *     Ext.create('Ext.form.Panel', {
+ *         title: 'Time Range',
+ *         width: 340,
+ *         bodyPadding: 10,
+ *         height: 400,
+ *         renderTo: Ext.getBody(),
+ *         fieldDefaults: {
+ *             labelAlign: 'left',
+ *             labelWidth: 40,
+ *             anchor: '100%'
+ *         },
+ *         items: [{
+ *             xtype: 'xdatetime',
+ *             name: 'from',
+ *             fieldLabel: 'From',
+ *             value: '2013-01-01T12:00:00Z',
+ *             maxValue: '2014-01-01T12:00:00Z'
+ *         }, {
+ *             xtype: 'xdatetime',
+ *             name: 'to',
+ *             fieldLabel: 'To',
+ *             minValue: '2013-01-01T12:00:00Z',
+ *             value: '2014-01-01T12:00:00Z'
+ *        }]
+ *     });
+ */
+Ext.define('NLeSC.form.field.DateTime', {
+    extend : 'Ext.form.FieldContainer',
+    mixins : {
+        field : 'Ext.form.field.Field'
+    },
+    requires: [
+        'Ext.form.field.VTypes',
+        'Ext.form.field.Date',
+        'Ext.form.field.Time'
+    ],
+    alias : 'widget.xdatetime',
+<span id='NLeSC-form-field-DateTime-property-combineErrors'>    //configurables
+</span>    combineErrors : false,
+<span id='NLeSC-form-field-DateTime-property-msgTarget'>    msgTarget : 'under',
+</span><span id='NLeSC-form-field-DateTime-property-layout'>    layout : 'hbox',
+</span><span id='NLeSC-form-field-DateTime-property-readOnly'>    readOnly : false,
+</span><span id='NLeSC-form-field-DateTime-cfg-dateFormat'>    /**
+</span>     * @cfg {String} dateFormat
+     * The default is 'Y-m-d'
+     */
+    dateFormat : 'Y-m-d',
+<span id='NLeSC-form-field-DateTime-cfg-timeFormat'>    /**
+</span>     * @cfg {String} timeFormat
+     * The default is 'H:i:s'
+     */
+    timeFormat : 'H:i:s',
+<span id='NLeSC-form-field-DateTime-cfg-dateTimeFormat'>    /**
+</span>     * @cfg {String} dateTimeFormat
+     * The format used when submitting the combined value.
+     * Defaults to 'c' (ISO8601 format)
+     */
+    dateTimeFormat : 'c',
+<span id='NLeSC-form-field-DateTime-property-labelAttrTpl'>    labelAttrTpl : 'data-qtip=&quot;Date time in UTC timezone&quot;',
+</span><span id='NLeSC-form-field-DateTime-cfg-dateConfig'>    /**
+</span>     * @cfg {Object} dateConfig
+     * Additional config options for the date field.
+     */
+    dateConfig : {},
+<span id='NLeSC-form-field-DateTime-cfg-timeConfig'>    /**
+</span>     * @cfg {Object} timeConfig
+     * Additional config options for the time field.
+     */
+    timeConfig : {},
+
+<span id='NLeSC-form-field-DateTime-property-dateValue'>    // properties
+</span>
+    dateValue : null, // Holds the actual date
+<span id='NLeSC-form-field-DateTime-property-dateField'>    /**
+</span>     * @property dateField
+     * @type Ext.form.field.Date
+     */
+    dateField : null,
+<span id='NLeSC-form-field-DateTime-property-timeField'>    /**
+</span>     * @property timeField
+     * @type Ext.form.field.Time
+     */
+    timeField : null,
+<span id='NLeSC-form-field-DateTime-method-initComponent'>    initComponent : function() {
+</span>        var me = this;
+        me.items = me.items || [];
+        
+    	this.forceUtcFormat();
+
+        me.dateField = Ext.create('Ext.form.field.Date', Ext
+                .apply({
+                    format : me.dateFormat,
+                    flex : 1,
+                    allowBlank : me.allowBlank,
+                    reset : Ext.emptyFn,
+                    getSubmitData: function(){
+                        return null;
+                    },
+                    getModelData: function(){
+                        return null;
+                    },
+                    submitValue : false
+                }, me.dateConfig));
+        me.items.push(me.dateField);
+
+        me.timeField = Ext.create('Ext.form.field.Time', Ext
+                .apply({
+                    format : me.timeFormat,
+                    flex : 1,
+                    allowBlank : me.allowBlank,
+                    reset : Ext.emptyFn,
+                    getSubmitData: function(){
+                        return null;
+                    },
+                    getModelData: function(){
+                        return null;
+                    },
+                    submitValue : false
+                }, me.timeConfig));
+        me.items.push(me.timeField);
+
+        for ( var i = 0; i &lt; me.items.length; i++) {
+            me.items[i].on('focus', Ext
+                    .bind(me.onItemFocus, me));
+            me.items[i].on('blur', Ext.bind(me.onItemBlur, me));
+            me.items[i]
+                    .on(
+                            'specialkey',
+                            function(field, event) {
+                                var key = event.getKey(), tab = key == event.TAB;
+
+                                if (tab
+                                        &amp;&amp; me.focussedItem == me.dateField) {
+                                    event.stopEvent();
+                                    me.timeField.focus();
+                                    return;
+                                }
+
+                                me.fireEvent('specialkey',
+                                        field, event);
+                            });
+        }
+
+        Ext.apply(Ext.form.field.VTypes, {
+            daterange : function(val, field) {
+                var date = val;
+
+                if (!date) {
+                    return false;
+                }
+                if (field.startDateField
+                        &amp;&amp; (!this.dateRangeMax || (date.getTime() != this.dateRangeMax
+                                .getTime()))) {
+                    var start = field.up('form').down('#' + field.startDateField);
+                    start.setMaxValue(date);
+                    this.dateRangeMax = date;
+                } else if (field.endDateField
+                        &amp;&amp; (!this.dateRangeMin || (date.getTime() != this.dateRangeMin
+                                .getTime()))) {
+                    var end = field.up('form').down('#' + field.endDateField);
+                    end.setMinValue(date);
+                    this.dateRangeMin = date;
+                }
+                /*
+                 * Always return true since we're only using this vtype to set the
+                 * min/max allowed values (these are tested for after the vtype test)
+                 */
+                return true;
+            },
+            daterangeText : 'Start date must be less than end date'
+        });
+
+        me.callParent();
+        me.initField();
+    },
+<span id='NLeSC-form-field-DateTime-method-forceUtcFormat'>    forceUtcFormat: function() {
+</span>        Ext.Date.formatCodes['Y'] = &quot;Ext.String.leftPad(this.getUTCFullYear(), 4, '0')&quot;;
+        Ext.Date.formatCodes['m'] = &quot;Ext.String.leftPad(this.getUTCMonth() + 1, 2, '0')&quot;;
+        Ext.Date.formatCodes['d'] = &quot;Ext.String.leftPad(this.getUTCDate(), 2, '0')&quot;;
+        Ext.Date.formatCodes['H'] = &quot;Ext.String.leftPad(this.getUTCHours(), 2, '0')&quot;;
+        Ext.Date.formatCodes['i'] = &quot;Ext.String.leftPad(this.getUTCMinutes(), 2, '0')&quot;;
+        Ext.Date.formatCodes['s'] = &quot;Ext.String.leftPad(this.getUTCSeconds(), 2, '0')&quot;;
+        Ext.Date.formatCodes['c'] = &quot;this.toISOString()&quot;;
+        Ext.Date.clearTime = function(date, clone) {
+        	if (clone) {
+                return Ext.Date.clearTime(Ext.Date.clone(date));
+            }
+        	
+        	date.setUTCHours(0);
+        	date.setUTCMinutes(0);
+        	date.setUTCSeconds(0);
+        	date.setUTCMilliseconds(0);
+        	
+        	return date;
+        }
+        Ext.JSON.encodeDate = function(d) {
+        	return '&quot;' + d.toISOString() + '&quot;';
+        }
+    },
+<span id='NLeSC-form-field-DateTime-method-focus'>    focus : function() {
+</span>        this.callParent();
+        this.dateField.focus();
+    },
+<span id='NLeSC-form-field-DateTime-method-onItemFocus'>    onItemFocus : function(item) {
+</span>        if (this.blurTask)
+            this.blurTask.cancel();
+        this.focussedItem = item;
+    },
+<span id='NLeSC-form-field-DateTime-method-onItemBlur'>    onItemBlur : function(item) {
+</span>        var me = this;
+        if (item != me.focussedItem)
+            return;
+        // 100ms to focus a new item that belongs to us, otherwise we will assume the user left the field
+        me.blurTask = new Ext.util.DelayedTask(function() {
+            me.fireEvent('blur', me);
+        });
+        me.syncValue();
+        me.blurTask.delay(100);
+    },
+<span id='NLeSC-form-field-DateTime-method-getValue'>    getValue : function() {
+</span>        var value = this.dateField.getValue();
+        var time = this.timeField.getValue();
+        
+        if (value &amp;&amp; time) {
+            value.setUTCHours(time.getUTCHours());
+            value.setUTCMinutes(time.getUTCMinutes());
+            value.setUTCSeconds(time.getUTCSeconds());
+        }
+        return value;
+    },
+<span id='NLeSC-form-field-DateTime-method-getSubmitValue'>    getSubmitValue : function() {
+</span>        var value = this.getValue();
+        return value ? Ext.Date.format(value,
+                this.dateTimeFormat) : null;
+    },
+<span id='NLeSC-form-field-DateTime-method-syncValue'>    // Synchronizes the submit value with the current state of the toStore
+</span>    syncValue: function() {
+        var me = this;
+        me.mixins.field.setValue.call(me, me.getValue());
+    },
+<span id='NLeSC-form-field-DateTime-method-setValue'>    setValue : function(value) {
+</span>        if (Ext.isString(value)) {
+            value = Ext.Date.parse(value, this.dateTimeFormat);
+        }
+        this.dateField.setValue(value);
+        this.timeField.setValue(value);
+        this.syncValue();
+    },
+<span id='NLeSC-form-field-DateTime-method-getFormat'>    getFormat : function() {
+</span>        return (this.dateField.submitFormat || this.dateField.format)
+                + &quot;T&quot;
+                + (this.timeField.submitFormat || this.timeField.format);
+    },
+<span id='NLeSC-form-field-DateTime-method-getSubmitData'>    // Bug? A field-mixin submits the data from getValue, not getSubmitValue
+</span>    getSubmitData : function() {
+        var me = this, data = null;
+        if (!me.disabled &amp;&amp; me.submitValue
+                &amp;&amp; !me.isFileUpload()) {
+            data = {};
+            data[me.getName()] = '' + me.getSubmitValue();
+        }
+        return data;
+    },
+<span id='NLeSC-form-field-DateTime-method-setMaxValue'>    setMaxValue : function(dt) {
+</span>        this.dateField.setMaxValue(dt);
+    },
+<span id='NLeSC-form-field-DateTime-method-setMinValue'>    setMinValue : function(dt) {
+</span>        this.dateField.setMinValue(dt);
+    },
+<span id='NLeSC-form-field-DateTime-method-getErrors'>    getErrors : function(value) {
+</span>        var me = this;
+        var errors = [];
+        var vtype = me.vtype;
+        var vtypes = Ext.form.field.VTypes;
+        value = value || me.getValue();
+
+        errors = errors.concat(this.dateField.getErrors());
+        errors = errors.concat(this.timeField.getErrors());
+
+        if (vtype) {
+            if (!vtypes[vtype](value, me)) {
+                errors.push(me.vtypeText
+                        || vtypes[vtype + 'Text']);
+            }
+        }
+        return errors;
+    }
+});
+</pre>
+</body>
+</html>

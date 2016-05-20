@@ -1,0 +1,14 @@
+*.pyc
+*.pyo
+*.DS_Store
+*.log
+#*#
+Thumbs.db
+/*.egg-info/
+/build/
+/dist/
+/.idea/
+/venv/
+.ipynb_checkpoints/
+eEcology-Annotation-UI-nobuild.tar.bz2
+data/

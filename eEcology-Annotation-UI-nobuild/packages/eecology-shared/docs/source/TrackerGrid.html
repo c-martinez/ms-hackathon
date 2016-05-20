@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The source code</title>
+  <link href="../resources/prettify/prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="../resources/prettify/prettify.js"></script>
+  <style type="text/css">
+    .highlight { display: block; background-color: #ddd; }
+  </style>
+  <script type="text/javascript">
+    function highlight() {
+      document.getElementById(location.hash.replace(/#/, "")).className = "highlight";
+    }
+  </script>
+</head>
+<body onload="prettyPrint(); highlight();">
+  <pre class="prettyprint lang-js">/*
+ * Copyright 2013 Netherlands eScience Center
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+<span id='NLeSC-eEcology-form-field-TrackerGrid'>/**
+</span> * Grid of trackers as form field. Must select a tracker to be valid.
+ */
+Ext.define('NLeSC.eEcology.form.field.TrackerGrid', {
+    extend: 'Ext.form.FieldContainer',
+    requires: ['NLeSC.eEcology.grid.Trackers'],
+    mixins: {
+        field: 'Ext.form.field.Field'
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-property-grid'>    /**
+</span>     * Grid to show.
+     */
+    grid: {
+        xtype: 'trackersgrid'
+    },
+    alias: 'widget.trackergridfield',
+<span id='NLeSC-eEcology-form-field-TrackerGrid-property-fieldLabel'>    fieldLabel: 'Tracker',
+</span><span id='NLeSC-eEcology-form-field-TrackerGrid-property-name'>    name: 'id',
+</span><span id='NLeSC-eEcology-form-field-TrackerGrid-cfg-string'>    /**
+</span>     * @cfg {blankText} string
+     *
+     * Error text to display if no tracker is selected.
+     */
+    blankText: 'No tracker selected',
+<span id='NLeSC-eEcology-form-field-TrackerGrid-property-msgTarget'>    msgTarget: 'under',
+</span><span id='NLeSC-eEcology-form-field-TrackerGrid-property-defaults'>    defaults: {flex: 1},
+</span><span id='NLeSC-eEcology-form-field-TrackerGrid-property-layout'>    layout: {
+</span>        type: 'hbox',
+        align: 'stretch'
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-property-autoWidth'>    autoWidth: true,
+</span><span id='NLeSC-eEcology-form-field-TrackerGrid-property-height'>    height: 300,
+</span><span id='NLeSC-eEcology-form-field-TrackerGrid-method-initComponent'>    initComponent: function() {
+</span>        this.grid.selModel = Ext.create('Ext.selection.CheckboxModel', {
+            mode: 'SINGLE',
+            showHeaderCheckbox: false
+        });
+        this.grid.selModel.on('selectionchange', this.onSelectionChange, this);
+        this.items = [this.grid];
+        this.callParent();
+        this.initField();
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-getSelectionModel'>    getSelectionModel: function() {
+</span>        return this.grid.selModel;
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-getValue'>    getValue: function() {
+</span>        var model =  this.getSelectionModel();
+        if (model.hasSelection()) {
+            return model.getSelection()[0].getId();
+        }
+        return null;
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-setValue'>    setValue: function(value) {
+</span>        var model =  this.getSelectionModel();
+        var store = model.getStore();
+        if (store === undefined) {
+            // Unable to setValue, store not initiated yet
+            return;
+        }
+        var record = store.getById(value);
+        model.select(record);
+        this.mixins.field.setValue.call(this, value);
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-getErrors'>    getErrors: function() {
+</span>        var value = this.getValue();
+        if (value === null) {
+            return [this.blankText];
+        }
+        return [];
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-reset'>    reset: function() {
+</span>        var model =  this.getSelectionModel();
+        model.deselectAll();
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-onSelectionChange'>    onSelectionChange: function(model, selections) {
+</span>        if (selections.length &gt; 0) {
+            this.setValue(selections[0].getId());
+        }
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-isValid'>    isValid : function() {
+</span>        var me = this,
+            disabled = me.disabled,
+            validate = me.forceValidation || !disabled;
+
+        return validate ? me.validateValue(me.value) : disabled;
+    },
+
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-validateValue'>    validateValue: function(value) {
+</span>        var me = this,
+            errors = me.getErrors(value),
+            isValid = Ext.isEmpty(errors);
+
+        if (!me.preventMark) {
+            if (isValid) {
+                me.clearInvalid();
+            } else {
+                me.markInvalid(errors);
+            }
+        }
+        return isValid;
+    },
+
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-markInvalid'>    markInvalid : function(errors) {
+</span>        // Save the message and fire the 'invalid' event
+        var me = this,
+            oldMsg = me.getActiveError();
+        me.setActiveErrors(Ext.Array.from(errors));
+        if (oldMsg !== me.getActiveError()) {
+            me.updateLayout();
+        }
+    },
+<span id='NLeSC-eEcology-form-field-TrackerGrid-method-clearInvalid'>    /**
+</span>     * @private
+     * Clear any invalid styles/messages for this field.
+     *
+     * __Note:__ this method does not cause the Field's {@link #validate} or {@link #isValid} methods to return `true`
+     * if the value does not _pass_ validation. So simply clearing a field's errors will not necessarily allow
+     * submission of forms submitted with the {@link Ext.form.action.Submit#clientValidation} option set.
+     */
+    clearInvalid : function() {
+        // Clear the message and fire the 'valid' event
+        var me = this,
+            hadError = me.hasActiveError();
+        me.unsetActiveError();
+        if (hadError) {
+            me.updateLayout();
+        }
+    }
+});
+</pre>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "data": {
+    "created": "2013-09-26T11:29:59Z",
+    "email": "s.verhoeven@esciencecenter.nl",
+    "expires": "2018-09-27T00:00:00Z",
+    "name": "NLeSC",
+    "uuid": "08fb6376-b720-434c-88f2-4242a7d317fe"
+  },
+  "publicKey": {
+    "algorithm": "RSA",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm+w8EFJbB3mkE6OzIRb6HYvZp7D9rEWVIyvVY3kVPRD6ijVF/4zJD7qK0RDJDH8lBwJJsdTv/1KT97j9l097jrWAN5DFCPH4lKiG7EZmzBXm0IaCeRj8Q78fk9/ISim231RNPvW5hHbvZyQLuYXHNYfxsUve6rG2HhPQzZ19yQOlO4BYS4hb9K69jJgJu8aIPyfKDAPZWesJrPCPgt9yGQdZz99fUSmpVTOCjwXHssY2CX430Ndd2lJsPinI/EOxvVOiitPj4Q5cHaVTfDBDIYDoQnmYS4pI9N8Ri8CeOAuNZM23nKa1nevBzGLqv9S4SH5yl4+o7iUQlGd9Cab6fwIDAQAB"
+  },
+  "signatures": [
+    {
+      "name": "NLeSC",
+      "uuid": "08fb6376-b720-434c-88f2-4242a7d317fe",
+      "created": "2013-09-26T11:30:02Z",
+      "algorithm": "SHA1withRSA",
+      "nonce": "Xf84deMviV0\u003d",
+      "signature": "U70vqVuPfP6KPJlLHUKRNx6eSNMnMmnRpVcbfn2Q4LyqhlY9DUQqfjclBV8Ru35pH8/mrO6g4jGtEQQKuuCxhvevgB2AKTjklKHLJF/N/XR9LBvYaIIBD+jUNGjA9YluQZkEjFkWSdt5dM5gYVefTCNyss8IsZVaUqofrjxl8jLZiu/UTAGWiE41jq3LSJPlmcaJHCVe+uFySi8P/1a/gIX7+8Ni+E3oa1mH/NNcBiJHhrIiXm+dxKEFEHHdtMWBkCfWe9S2PM1dFG81gcEK2YMFTajA3asbNYdTo+BK4KzuZaYB9wD93RSHfQbnDuPEOF+sopQZtzYjCS34GamrKA\u003d\u003d"
+    }
+  ]
+}

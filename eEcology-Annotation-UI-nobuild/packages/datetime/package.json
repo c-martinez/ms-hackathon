@@ -1,0 +1,19 @@
+{
+  "name": "datetime",
+  "format": "1",
+  "version": "1.1.6",
+  "creator": "NLeSC",
+  "summary": "UTC Date time form field",
+  "detailedDescription": "Combination of Date and time field in UTC timezone",
+  "type": "code",
+  "signatures": [
+    {
+      "name": "NLeSC",
+      "uuid": "08fb6376-b720-434c-88f2-4242a7d317fe",
+      "created": "2014-10-14T09:46:18Z",
+      "algorithm": "SHA1withRSA",
+      "nonce": "mE1uKfCPgCg\u003d",
+      "signature": "LeTrL9+HNr5GQFJr+RFjPUDKz2rxzGZOn8jILN8JoFiuBqdiC/v1ergk86Q7uxF6BdzaKRMsiZE/ZkB2mDUzk6YY0frkukPwp2KnoI9PTHxoKE38L1QmIXN9o4a3BmWCccEet+1ETem+8+9dcEFZDpihY3UsK/2id3XbSOF8OempoyWp5d/bFeDTEz3PRa2Lu209x8RUpI00ffISVLoud54rYrdyk5gfh2Xaq39hNjQjZWPX5GNNPtI1SB8w2Kcfuy4dYLsnMHs76o6YMXnpxZfBIjnwsMvF6QQFIfa/8jzkPPz9vD4E1IByC+zlCONPFNAlFoia4B0F/xCoTq22Mw\u003d\u003d"
+    }
+  ]
+}
